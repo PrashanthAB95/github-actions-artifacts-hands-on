@@ -34,8 +34,9 @@ jobs:
         ls -lart
         ls -l artifacts/
         file ./artifacts/hello.txt
-        sudo apt-get install unzip
-        unzip hello.txt.zip -d ./artifacts
+        cp ./artifacts/hello.txt/hello.txt ./artifacts/hello.txt
+        file ./artifacts/hello.txt
+        ls -l artifacts/    
 
     - name: display content
       run: cat ./artifacts/hello.txt
