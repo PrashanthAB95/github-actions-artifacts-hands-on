@@ -32,7 +32,8 @@ jobs:
     - name: display files
       run: |
         ls -lart
-        ls artifacts 
+        ls -l artifacts 
+        file ./artifacts/hello.txt
 
     - name: display content
       run: cat ./artifacts/hello.txt
