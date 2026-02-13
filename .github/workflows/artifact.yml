@@ -27,14 +27,14 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: hello-artifact
-        path: ./artifacts/hello.txt
+        path: ./artifacts/
 
     - name: display files
       run: |
         ls -lart
         ls -l artifacts/
         file ./artifacts/hello.txt
-        cp ./artifacts/hello.txt/hello.txt ./artifacts/hello.txt
+        
         file ./artifacts/hello.txt
         ls -l artifacts/    
 
