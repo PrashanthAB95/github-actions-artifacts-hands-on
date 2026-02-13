@@ -32,8 +32,10 @@ jobs:
     - name: display files
       run: |
         ls -lart
-        ls -l artifacts 
+        ls -l artifacts/
         file ./artifacts/hello.txt
+        sudo apt-get install unzip
+        unzip hello.txt.zip -d ./artifacts
 
     - name: display content
       run: cat ./artifacts/hello.txt
