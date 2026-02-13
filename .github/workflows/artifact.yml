@@ -30,7 +30,10 @@ jobs:
         path: ./artifacts/hello.txt
 
     - name: display files
-      run: ls -lart
+      run: |
+      ls -lart
+      cd artifacts
+      ls ./artifacts 
 
     - name: display content
       run: cat ./artifacts/hello.txt
